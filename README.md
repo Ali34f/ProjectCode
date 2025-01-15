@@ -50,4 +50,4 @@ This repository is licensed under the MIT License, so feel free to use, modify, 
 ## 🚀 Let's Get Random!
 Dive into the projects, have fun, and unleash your creativity. If you find something inspiring or build something awesome, share it with the world!
 
-Happy coding! ✨
+Jahin Khan
