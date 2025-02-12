@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    margin: 0;
+}
+
+.candle {
+    position: relative;
+    width: 50px; 
+    height: 160px; 
+    background-color: #fff;
+    border-radius: 8px; 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
+}
+
+.flame {
+    position: absolute;
+    top: -30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px; 
+    height: 60px; 
+    background-color: #ffcc00;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flicker 1.5s infinite ease-in-out;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+        box-shadow: 0 0 30px #ffcc00, 0 0 60px #ffcc00, 0 0 90px #ffcc00; /* Enhanced glow */
+    }
+    50% {
+        transform: translateX(-50%) scale(1.1, 0.9);
+        box-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00, 0 0 60px #ffcc00; /* Adjusted glow */
+    }
+}
+
+.sparks {
+    position: absolute;
+    top: -35px; /* Adjusted for larger flame */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px; /* Increased sparks container size */
+    height: 15px;
+}
+
+.spark {
+    position: absolute;
+    width: 3px; /* Slightly larger sparks */
+    height: 15px; /* Taller sparks */
+    background-color: #ffcc00;
+    border-radius: 50%;
+    animation: sparkle 1s infinite ease-in-out;
+}
+
+.spark:nth-child(1) {
+    top: 0;
+    left: 0;
+    animation-delay: 0s;
+}
+
+.spark:nth-child(2) {
+    top: 8px; /* Adjusted for larger sparks */
+    left: 8px;
+    animation-delay: 0.3s;
+}
+
+.spark:nth-child(3) {
+    top: -8px;
+    left: -8px;
+    animation-delay: 0.6s;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-15px) scale(0.5); /* Adjusted spark movement */
+        opacity: 0.5;
+    }
+}
